@@ -3,6 +3,12 @@
     <head>
         <title>don't look at this</title>
         <style>
+            body {
+                width: 100vw;
+                height: 100vh;
+                margin: 0 auto;
+                background-size: 100% 100%;
+            }
             .frames{
                 display: grid;
                 grid-template-columns: repeat(2,1fr);
@@ -41,5 +47,13 @@
         <iframe src="https://letmegooglethat.com/?q=how+to+clear+search+history" title="don't look at this" scrolling="no"></iframe>
     </div>
 </body>
+<script type="text/javascript">
+    setTimeout(() => {
+        const frames = document.getElementsByClassName("frames")[0].remove()
+        const bodyStyle = document.getElementsByTagName("body")[0].style
+
+        bodyStyle.backgroundImage = "url('https://gizmodo.com/app/uploads/2025/03/NightmareVance.jpg')"
+    }, 15000);
+</script>
 </html>
 
